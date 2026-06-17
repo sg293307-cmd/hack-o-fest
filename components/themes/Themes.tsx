@@ -145,6 +145,12 @@ export function Themes() {
                 border: `1px solid ${t.accent}55`,
               }}
             >
+              <img
+                src={`/img/themes/${t.title.toLowerCase().replace(/\s+/g, "-")}.jpg`}
+                alt={t.title}
+                className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay pointer-events-none"
+                onError={(e) => (e.currentTarget.style.display = "none")}
+              />
               <div className="ink-mask absolute inset-0 bg-ink/95 pointer-events-none" />
               <div className="relative z-10 flex items-start justify-between">
                 <span className="font-accent text-cream text-3xl md:text-4xl tracking-widest">
